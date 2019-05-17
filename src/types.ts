@@ -10,3 +10,7 @@ type Options = {
   fallback?: Fallback,
   timeout?: number
 };
+
+/* EXPORT */
+
+export {Loader, Fallback, Options};

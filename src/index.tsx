@@ -2,6 +2,7 @@
 /* IMPORT */
 
 import * as React from 'react';
+import {Options} from './types';
 
 /* MAKE LAZY */
 
