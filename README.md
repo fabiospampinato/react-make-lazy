@@ -15,6 +15,7 @@ npm install --save react-make-lazy
 A regular component could be rendered this way:
 
 ```tsx
+import * as React from 'react';
 import MyComponent from './my_component';
 
 const Foo = () => (
@@ -27,6 +28,7 @@ const Foo = () => (
 If you now want to load it lazily you have to do this:
 
 ```tsx
+import * as React from 'react';
 import makeLazy from 'react-make-lazy';
 
 const MyComponentLazy = makeLazy ({
