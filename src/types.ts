@@ -1,7 +1,11 @@
 
+/* IMPORT */
+
+import {ComponentType} from 'react';
+
 /* TYPES */
 
-type Loader = <R extends React.ComponentType<any>>() => Promise<{ default: R }>;
+type Loader = () => Promise<{ default: ComponentType<any> }>;
 
 type Fallback = NonNullable<React.ReactNode> | null;
 
