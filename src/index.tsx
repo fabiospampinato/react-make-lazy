@@ -6,7 +6,7 @@ import {Options} from './types';
 
 /* MAKE LAZY */
 
-function makeLazy ( options: Options ) {
+function makeLazy <Props = {}> ( options: Options ) {
 
   const LazyComponent = React.lazy ( options.loader );
 
@@ -14,7 +14,7 @@ function makeLazy ( options: Options ) {
     setTimeout ( options.loader, options.timeout );
   }
 
-  return props => (
+  return ( props: Props ) => (
     <React.Suspense fallback={options.fallback || null}>
       <LazyComponent {...props} />
     </React.Suspense>
